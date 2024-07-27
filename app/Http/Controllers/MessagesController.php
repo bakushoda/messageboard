@@ -32,7 +32,7 @@ class MessagesController extends Controller
     {
         //バリデーション
         $request->validate([
-            'title' => 'required|255',
+            'title' => 'required|max:255',
             'content' => 'required|max:255',
         ]);
 
