@@ -8,9 +8,9 @@ use App\Models\Message;
 class MessagesController extends Controller
 {
     public function index()
-    {
+    {  
         // メッセージ一覧を取得
-        $messages = Message::all();
+        $messages = Message::orderBy('id', 'asc')->paginate(25);
 
         // メッセージ一覧ビューでそれを表示
         return view('messages.index', [
@@ -74,7 +74,7 @@ class MessagesController extends Controller
     {
         //バリデーション
         $request->validate([
-            'title' => 'required|255',
+            'title' => 'required|max:255',
             'content' => 'required|max:255',
         ]);
 

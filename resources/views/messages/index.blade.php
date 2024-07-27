@@ -25,6 +25,11 @@
         </table>
     @endif
     
+    {{-- ページネーションのリンク --}}
+    <div class="mt-4">
+        {{ $messages->links('pagination::bootstrap-5') }}
+    </div>
+
     {{-- メッセージ作成ページへのリンク --}}
     <a href="{{ route('messages.create') }}" class="btn btn-primary">新規メッセージの投稿</a>
 

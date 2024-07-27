@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>id = {{ $message->id }} のメッセージ詳細ページ</h1>
+    <h1>{{ $message->title }} のメッセージ詳細ページ</h1>
 
     <table class="table table-bordered">
         <tr>
@@ -10,7 +10,7 @@
             <td>{{ $message->id }}</td>
         </tr>
         <tr>
-            <th>id</th>
+            <th>タイトル</th>
             <td>{{ $message->title }}</td>
         </tr>
         <tr>

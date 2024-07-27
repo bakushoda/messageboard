@@ -11,10 +11,10 @@
                 @method('PUT')
 
                 <div class="form-group">
-                    <label for="content">タイトル:</label>
+                    <label for="title">タイトル:</label>
                     <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $message->title ?? '') }}">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="content">メッセージ:</label>
                     <input type="text" name="content" id="content" class="form-control" value="{{ old('content', $message->content) }}">

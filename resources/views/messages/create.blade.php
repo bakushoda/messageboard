@@ -10,7 +10,7 @@
                 @csrf
 
                 <div class="form-group">
-                    <label for="content">タイトル:</label>
+                    <label for="title">タイトル:</label>
                     <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $message->title ?? '') }}">
                 </div>
 
